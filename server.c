@@ -39,8 +39,9 @@ int main(int argc, char **argv) {
 
   printf("%s\n","Server running...waiting for connections.");
 
+  // Weird syntax for infinite loop
   for ( ; ; ) {
-
+    // Sets length of client IP address
     clilen = sizeof(cliaddr);
     //accept a connection
     connfd = accept (listenfd, (struct sockaddr *) &cliaddr, &clilen);
